@@ -1,7 +1,3 @@
-var
-  where = 'client' // Adds files only to the client
-;
-
 Package.describe({
   name    : 'semantic:ui-css',
   summary : 'Semantic UI - CSS Release of Semantic UI',
@@ -15,8 +11,20 @@ Package.onUse(function(api) {
 
   api.use('jquery', 'client');
 
-  api.addFiles([
+  api.addAssets([
     // icons
+    'themes/default/assets/fonts/outline-icons.eot',
+    'themes/default/assets/fonts/outline-icons.svg',
+    'themes/default/assets/fonts/outline-icons.ttf',
+    'themes/default/assets/fonts/outline-icons.woff',
+    'themes/default/assets/fonts/outline-icons.woff2',
+
+    'themes/default/assets/fonts/brand-icons.eot',
+    'themes/default/assets/fonts/brand-icons.svg',
+    'themes/default/assets/fonts/brand-icons.ttf',
+    'themes/default/assets/fonts/brand-icons.woff',
+    'themes/default/assets/fonts/brand-icons.woff2',
+
     'themes/default/assets/fonts/icons.eot',
     'themes/default/assets/fonts/icons.svg',
     'themes/default/assets/fonts/icons.ttf',
@@ -25,10 +33,11 @@ Package.onUse(function(api) {
 
     // flags
     'themes/default/assets/images/flags.png',
+  ], 'client');
 
+	api.addFiles([
     // release
     'semantic.css',
     'semantic.js'
   ], 'client');
-
 });
